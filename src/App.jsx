@@ -49,7 +49,9 @@ function App() {
           <h5>{data.sys?.country}</h5>
         </div>
         <div>
-          <h1>{temp} °C</h1>
+          <h1>
+            {temp} {isCelcius ? "°C" : "°F"}
+          </h1>
         </div>
         <div>
           <b>Description: </b>

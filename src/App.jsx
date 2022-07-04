@@ -30,10 +30,12 @@ function App() {
   }, []);
   const convertTemp = () => {
     if (isCelcius) {
-      setCelciusTemp(celciusTemp * 1.8 + 32);
+      // Transformar a farenheit
+      setTemp(Math.round(temp * (9 / 5) + 32));
       setIsCelcius(false);
     } else {
-      setCelciusTemp((celciusTemp - 32) / 1.8);
+      // Transformar a celcius;
+      setTemp(Math.round((temp - 32) * (5 / 9)));
       setIsCelcius(true);
     }
   };
